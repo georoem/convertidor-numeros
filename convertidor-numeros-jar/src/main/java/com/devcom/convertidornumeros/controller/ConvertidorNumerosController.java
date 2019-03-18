@@ -33,11 +33,8 @@ public class ConvertidorNumerosController {
 	 * @throws ServiceException
 	 */
 	@RequestMapping(value = "/arabigo/romano/{numero}", method = RequestMethod.GET)
-    public @ResponseBody String convertirNumeroArabigoARomano(@PathVariable("numero") String numeroArabigo) throws ServiceException {
-		
-        String resultadoConversion = convertidorNumeroSevices.arabigoARomano(numeroArabigo);
-        
-        return resultadoConversion;
+    public @ResponseBody String convertirNumeroArabigoARomano(@PathVariable("numero") String numeroArabigo) throws ServiceException {		
+        return convertidorNumeroSevices.arabigoARomano(numeroArabigo);
     }
 	
 	/** Método para manejar las excepciones de la aplicación
